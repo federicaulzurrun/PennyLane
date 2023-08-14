@@ -10,9 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_08_14_210809) do
+ActiveRecord::Schema[7.0].define(version: 2023_08_14_212306) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "group_movements", force: :cascade do |t|
+    t.bigint "group_id", null: false
+    t.bigint "movement_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["group_id"], name: "index_group_movements_on_group_id"
+    t.index ["movement_id"], name: "index_group_movements_on_movement_id"
+  end
 
   create_table "groups", force: :cascade do |t|
     t.string "name"
@@ -40,6 +49,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_14_210809) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "group_movements", "groups"
+  add_foreign_key "group_movements", "movements"
   add_foreign_key "groups", "users"
   add_foreign_key "movements", "groups"
   add_foreign_key "movements", "users"
