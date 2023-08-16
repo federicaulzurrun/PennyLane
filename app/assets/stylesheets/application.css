@@ -17,6 +17,10 @@ a {
   color: black;
 }
 
+a:hover {
+  text-decoration: none !important;
+}
+
 .link-to {
   background-color: #4caf50;
   color: #fff;
@@ -133,7 +137,8 @@ a {
   gap: 10%;
 }
 
-.loginHeader h2 {
+.loginHeader h2,
+.forgotPassword h2 {
   margin: auto 32%;
   font-weight: 400;
   align-self: center;
@@ -208,4 +213,13 @@ a [class*=" icon-"] {
   border-bottom: 1px solid #d4d4d4;
   padding: 18px 10px !important;
   margin-bottom: 0 !important;
+}
+
+/* New Password */
+
+.forgotPassword {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
 }
