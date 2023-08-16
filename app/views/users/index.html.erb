@@ -1,12 +1,7 @@
-<div>
-  <h1>PennyLane</h1>
-  <h5>PennyLane is an app that allows you to keep track of your daily expenses</h5>
-
-  <% if user_signed_in? %>
-    <%= link_to 'Dashboard', dashboard_path %>
-    <%= link_to 'Log Out', destroy_user_session_path, method: :delete %>
-  <% else %>
-    <%= link_to 'Sign Up', new_user_registration_path %>
-    <%= link_to 'Log In', new_user_session_path %>
-  <% end %>
+<div class="splash">
+  <h1 class="splashTitle">PennyLane</h1>
+  <div class="btnContainer">
+    <a href="<%= new_user_session_path %>" class="btn blue">Log In</a>
+    <a href="<%= new_user_registration_url %>" class="btn grey">Sign Up</a>
+  </div>
 </div>
