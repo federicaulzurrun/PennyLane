@@ -170,7 +170,8 @@ a [class*=" icon-"] {
   padding: 18px 10px !important;
 }
 
-.field .email {
+.field .email,
+.imputField .email {
   border-bottom: 1px solid #d4d4d4;
   border-top: 1px solid #d4d4d4;
   margin-top: 3%;
@@ -196,4 +197,15 @@ a [class*=" icon-"] {
 
 .linkForgot:hover {
   color: #434b54;
+}
+
+/* sing up */
+
+.imputField input {
+  width: 100%;
+  border: none;
+  background-color: #fffefe;
+  border-bottom: 1px solid #d4d4d4;
+  padding: 18px 10px !important;
+  margin-bottom: 0 !important;
 }
