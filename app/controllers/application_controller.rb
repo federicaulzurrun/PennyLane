@@ -1,6 +1,10 @@
 class ApplicationController < ActionController::Base
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:splash]
   before_action :update_allowed_parameters, if: :devise_controller?
+
+  def splash
+    redirect_to new_user_registration_path
+  end
 
   protected
 

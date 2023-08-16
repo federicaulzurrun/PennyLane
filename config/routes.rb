@@ -1,17 +1,14 @@
 Rails.application.routes.draw do
-  devise_for :users, path: '', path_names: { sign_in: 'login' }
+  devise_for :users
 
-  root to: redirect('/login'), constraints: ->(request) { !request.env['warden'].user }
-
-  authenticated :user do
-    resources :users, only: :index
-
-    resources :groups, only: [:index, :new, :create, :show, :destroy, :update] do
-      resources :movements, only: [:index, :new, :create, :destroy, :update]
-    end
+  devise_scope :user do  
+    get '/users/sign_out' => 'devise/sessions#destroy'     
   end
 
-  devise_scope :user do
-    get '/users/sign_out' => 'devise/sessions#destroy'
+  root to: "users#index"
+  resources :users, only: %i[index]
+
+  resources :groups, only: %i[index new create show destroy update] do
+    resources :movements, only: %i[index new create destroy update]
   end
 end

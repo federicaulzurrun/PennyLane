@@ -1,0 +1,24 @@
+<h1>Categories</h1>
+<h2 class="categories-title">Aggregate Spending: $<%= total_sum = Movement.sum(:amount) %></h2>
+<ul>
+  <% @groups.each do |group| %>
+    <li class="groupItem">
+      <%= link_to group_movements_path(group), class: "groupItem" do %>
+        <div class="groupItemImgCont">
+          <% if group.icon.present? %>
+            <%= image_tag group.icon, alt: "#{group.name} icon", class: "group-icon" %>
+          <% else %>
+            No icon available
+          <% end %>
+        </div>
+        <div class="groupItemTextCont">
+          <%= group.name %>
+          Total Movements: <%= group.movements.count %>
+        </div>
+      <% end %>
+    </li>
+  <% end %>
+
+  <%= link_to 'Add a new category', new_group_path, class: 'btn btn-primary' %>
+</ul>
+

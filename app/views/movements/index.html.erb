@@ -1,0 +1,31 @@
+<h2 class="groupTitle">Transactions for: <%= @group.name %></h2>
+<h2 class="groupTitle">Total amount: $<%= @total_amount %></h2>
+
+<% if @movements.blank? %>
+  <h2 class="noGroup"> No registered transactions </h2>
+  <h4 class="noGroup"> Your new transactions will be placed here </h4>
+<% else %>
+  <div>
+    <% @movements.each do |movement| %>
+      <div class="movementCont">
+        <div class="movementCard">
+          <div class="movementDetails">
+            <div class="">
+              <%= image_tag @group.icon rescue image_tag %>
+            </div>
+            <div class="movementInfo">
+              <p>Name: <%= movement.name %> </p>
+              <p>Date: <%= movement.created_at.to_date %> </p>
+            </div>
+          </div>
+          <div class="">
+            <p>Amount: $<%= movement.amount %> </p>
+            <%= button_to "Delete", group_movement_path(user_id: movement.user.id, group_id: movement.group.id, id: movement.id), method: :delete, class: "deleteBtn"  %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<% end %>
+<%= link_to "Add a new transaction", new_group_movement_path, class:'link-to' %>
+<%= link_to "Back", groups_path, class: 'back-link' %>

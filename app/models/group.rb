@@ -1,5 +1,8 @@
 class Group < ApplicationRecord
   belongs_to :user
-  has_many :group_movements
-  has_many :movements, through: :group_movements
+  has_many :movements
+
+  def total_amount
+    movements.sum(:amount)
+  end
 end
