@@ -60,7 +60,7 @@ a {
   gap: 10%;
 }
 
-.btn {
+.button {
   width: 90%;
   padding: 0.6rem;
   border: none;
@@ -93,7 +93,7 @@ a {
   width: 100%;
 }
 
-.blue {
+.btn-blue {
   background-color: #3778c2;
   color: #fff;
   text-transform: uppercase;
@@ -101,7 +101,7 @@ a {
   padding: 11.5px 0;
 }
 
-.grey {
+.btn-grey {
   color: #434b54;
   background-color: #fffefe;
   text-transform: uppercase;
@@ -116,4 +116,84 @@ a {
   align-items: center;
   height: 70vh;
   font-size: 2.6rem;
+}
+
+/* Log In Page */
+
+.logIn {
+  display: flex;
+  flex-direction: column;
+}
+
+.loginHeader {
+  background-color: #3778c2;
+  color: #fff;
+  padding: 2%;
+  display: flex;
+  gap: 10%;
+}
+
+.loginHeader h2 {
+  margin: auto 32%;
+  font-weight: 400;
+  align-self: center;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2.3vw;
+}
+
+.backArrow {
+  width: 2em;
+  height: 2em;
+  align-self: center;
+}
+
+a [class^="icon-"],
+a [class*=" icon-"] {
+  display: flex !important;
+  flex-direction: column;
+  width: 2em !important;
+  height: 1.5em !important;
+  color: #fff;
+  justify-content: center;
+  align-self: center;
+  align-content: center;
+  padding-left: 5px;
+  font-size: 20px;
+}
+
+.field input {
+  width: 100%;
+  border: none;
+  background-color: #fffefe;
+  border-bottom: 1px solid #d4d4d4;
+  padding: 18px 10px !important;
+}
+
+.field .email {
+  border-bottom: 1px solid #d4d4d4;
+  border-top: 1px solid #d4d4d4;
+  margin-top: 3%;
+  margin-bottom: 0;
+}
+
+.action input {
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  background-color: #3778c2;
+  border: none;
+  text-decoration: none;
+  color: #fff;
+}
+
+.linkForgot {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  color: #d4d4d4;
+}
+
+.linkForgot:hover {
+  color: #434b54;
 }
