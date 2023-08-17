@@ -68,7 +68,7 @@
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Live Demo & preview <a name="live-demo"></a>
-
+[walkthrough loom](https://www.loom.com/share/adc7d21522c7491fa4ecd014613c84b3?sid=fc5c7185-7230-4b0a-b184-93f9a531c0f3)
 [live demo](https://rails-08wi.onrender.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

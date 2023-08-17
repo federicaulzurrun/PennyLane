@@ -390,3 +390,21 @@ a [class*=" icon-"] {
 .saveT {
   padding-top: 5px;
 }
+
+@media (max-width: 767px) {
+  body {
+    padding: 0 !important;
+  }
+
+  .groupsContainer {
+    padding-right: 10px;
+  }
+
+  .bodyGroup {
+    top: 180px;
+  }
+
+  .cardTransactions {
+    top: 240px;
+  }
+}
