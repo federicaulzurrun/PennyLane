@@ -7,6 +7,7 @@
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
+  - [🚀 Live Demo](#live-demo)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -63,6 +64,12 @@
 - **Expense Tracking:** Easily record and categorize your transactions to maintain a clear overview of your spending habits.
 
 - **User-Friendly Interface:** PennyLane's clean and intuitive interface ensures a smooth user experience, making financial management a breeze.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🚀 Live Demo & preview <a name="live-demo"></a>
+
+[live demo](https://rails-08wi.onrender.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
