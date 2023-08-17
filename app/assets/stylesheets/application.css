@@ -21,18 +21,30 @@ a:hover {
   text-decoration: none !important;
 }
 
+.linkContainer {
+  width: 100%;
+  display: flex;
+  background-color: #5fb523;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+  padding: 15px 0;
+}
+
 .link-to {
-  background-color: #4caf50;
+  background-color: #5fb523;
   color: #fff;
-  padding: 10px 20px;
-  width: 50vw;
+  padding: 10px 10px;
+  width: 80vw;
   justify-content: center;
   margin: auto;
-  border-radius: 4px;
-  font-weight: bold;
   transition: background-color 0.3s ease;
   text-align: center;
-  margin-top: 3%;
+  display: flex;
+  align-self: center;
+  border: #fff 1px solid;
+  font-size: 1rem;
+  text-transform: uppercase;
 }
 
 .link-to:hover {
@@ -42,26 +54,6 @@ a:hover {
 .noGroup {
   text-align: center;
   margin-top: 5%;
-}
-
-.groupItem {
-  display: flex;
-  margin: 0 10%;
-  padding: 10px 50px;
-}
-
-.groupItemImgCont {
-  width: 20%;
-}
-
-.groupItemImgCont img {
-  width: 14%;
-}
-
-.groupItemTextCont {
-  display: flex;
-  width: 80%;
-  gap: 10%;
 }
 
 .button {
@@ -147,7 +139,8 @@ a:hover {
   font-size: 2.3vw;
 }
 
-.backArrow {
+.backArrow,
+.search {
   width: 2em;
   height: 2em;
   align-self: center;
@@ -191,6 +184,7 @@ a [class*=" icon-"] {
   border: none;
   text-decoration: none;
   color: #fff;
+  padding-right: 5px;
 }
 
 .linkForgot {
@@ -222,4 +216,135 @@ a [class*=" icon-"] {
   flex-direction: column;
   justify-content: center;
   width: 100%;
+}
+
+/* Groups Index */
+
+.bodyGroup {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  top: 250px;
+}
+
+.groupHeader {
+  gap: 4%;
+}
+
+.search {
+  display: flex;
+}
+
+.search img {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  display: flex;
+  color: #fff !important;
+  background-color: #3778c2;
+  margin-top: 5px;
+}
+
+.categories-title {
+  font-size: 2.2vw;
+  font-weight: 400;
+  text-align: center;
+  box-shadow: 1px 2px 4px rgba(86, 86, 86, 0.468);
+  padding: 2%;
+  margin-top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.categories-text {
+  order: 1;
+}
+
+.categories-number {
+  order: 2;
+}
+
+.groupsContainer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  padding-right: 55px;
+}
+
+.groupItem {
+  width: 90vw;
+  margin: 2%;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-self: center;
+  justify-content: space-between;
+}
+
+.groupItem a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.groupItemImgCont {
+  width: 100px;
+  height: 10%;
+  margin: 4% 0;
+  margin-right: 20px;
+  margin-left: 4%;
+}
+
+.groupItemTextCont {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  padding-right: 15px;
+  margin: 10px 0;
+  padding-top: 10px;
+}
+
+.groupItemTextCont h3 {
+  color: #434b54;
+  text-transform: capitalize;
+  margin-bottom: 25px;
+}
+
+.groupItemTextCont p {
+  margin-bottom: 0;
+  color: #7e878f;
+}
+
+.groupItemCreated {
+  display: flex;
+  flex-direction: column;
+  padding-right: 15px;
+}
+
+.groupItemCreated p {
+  color: #000;
+  align-self: flex-end;
+}
+
+.groupItemCreated .btn {
+  background-color: #fff;
+  text-decoration: none;
+  color: #000;
+  border: none;
+  box-shadow: none;
 }

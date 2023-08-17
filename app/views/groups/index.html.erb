@@ -1,24 +1,44 @@
-<h1>Categories</h1>
-<h2 class="categories-title">Aggregate Spending: $<%= total_sum = Movement.sum(:amount) %></h2>
-<ul>
-  <% @groups.each do |group| %>
-    <li class="groupItem">
-      <%= link_to group_movements_path(group), class: "groupItem" do %>
-        <div class="groupItemImgCont">
-          <% if group.icon.present? %>
-            <%= image_tag group.icon, alt: "#{group.name} icon", class: "group-icon" %>
-          <% else %>
-            No icon available
+<div class="all">
+  <div class="loginHeader groupHeader">
+    <%= link_to destroy_user_session_path, method: :delete, class: 'backArrow' do %>
+      <i class="icon-arrow-left"></i>
+    <% end %>
+    <h2 class="groupHeaderTitle">Categories</h2>
+    <div class="search">
+      <img src="https://i.postimg.cc/R0xX4NtN/pngfind-com-lupa-png-sin-fondo-4235556.png' border='0' alt='pngfind-com-lupa-png-sin-fondo-4235556'"/>
+    </div>
+  </div>
+
+  <h2 class="categories-title">
+      <span class="categories-text">Aggregate Spending</span>
+      <span class="categories-number">$<%= total_sum = Movement.sum(:amount) %></span>
+  </h2>
+  <div class="bodyGroup">
+    <div class="groupsContainer">
+      <% @groups.each do |group| %>
+        <div class="groupItem">
+          <%= link_to group_movements_path(group) do %>
+            <div class="groupItemImgCont">
+              <% if group.icon.present?%>
+                <%= image_tag group.icon, alt: "#{group.name} icon", class: "group-icon" %>
+              <% else %>
+                No icon available
+              <% end %>
+            </div>
+            <div class="groupItemTextCont">
+                <h3><%= group.name%></h3>
+                <p><%= l group.created_at.to_date, format: :long %></p>
+            </div>
           <% end %>
-        </div>
-        <div class="groupItemTextCont">
-          <%= group.name %>
-          Total Movements: <%= group.movements.count %>
+          <div class="groupItemCreated">
+                <p>$<%= Movement.where(group_id: group.id).sum(:amount) %></p>
+                <%= button_to 'Delete', group_path(id: group.id), method: :delete, class: 'btn ' %>
+              </div>
         </div>
       <% end %>
-    </li>
-  <% end %>
-
-  <%= link_to 'Add a new category', new_group_path, class: 'btn btn-primary' %>
-</ul>
-
+    </div>
+    <div class="linkContainer">
+      <%= link_to 'Add a new category', new_group_path, class: 'link-to' %>
+    </div>
+  </div>
+</div>

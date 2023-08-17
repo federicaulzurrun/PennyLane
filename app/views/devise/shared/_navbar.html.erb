@@ -1,15 +1,1 @@
-<% if user_signed_in? %>
-  <nav class="navbar">
-    <div class="navCont">
-      <%= link_to "PennyLane", groups_path, class: "navbar-brand" %>
-      <button>
-        <span class="navbarTitle"></span>
-      </button>
-      <div class="SingOut">
-        <span class="nav-item">
-          <%= link_to "Sign Out", destroy_user_session_path, class: "nav-link", data: { turbo_method: :delete } %>
-        </span>
-      </div>
-    </div>
-  </nav>
-<% end %>
+
