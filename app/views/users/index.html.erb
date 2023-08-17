@@ -1,7 +1,7 @@
-<h1>Users List</h1>
-
-<ul>
-  <% @users.each do |user| %>
-    <li><%= user.name %></li>
-  <% end %>
-</ul>
+<div class="splash">
+  <h1 class="splashTitle">PennyLane</h1>
+  <div class="btnContainer">
+      <a href="<%= new_user_session_path %>" class="button btn-blue">Log In</a>
+      <a href="<%= new_user_registration_url %>" class="button btn-grey">Sign Up</a>
+  </div>
+</div>
