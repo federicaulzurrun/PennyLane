@@ -155,8 +155,8 @@ To deploy the project locally, run the following command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[]**
-- [ ] **[]**
+- [ ] **[Group Expense Sharing]** Collaborate with friends, family, or colleagues by creating shared expense groups. PennyLane calculates and splits expenses, simplifying the process of settling accounts
+- [ ] **[Aggregated Spending]** Get insights into your financial behavior with the "Aggregate Spending" feature, showcasing your total expenditures.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
