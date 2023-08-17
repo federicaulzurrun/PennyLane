@@ -24,14 +24,14 @@
 
 # 📖 PennyLane <a name="about-project"></a>
 
-**PennyLane** ... 
+**PennyLane** is a web application designed to help users track and manage their financial transactions seamlessly. Whether it's monitoring your personal expenses or keeping a record of shared expenses within groups, PennyLane offers an intuitive and efficient platform to stay on top of your finances.
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
 <details>
-<summary>Backend</summary>
+<summary>Back-End</summary>
   <ul>
     <li><a href="https://www.ruby-lang.org/en/documentation/installation/">Ruby</a></li>
     <li><a href="https://rubyonrails.org/">Ruby on Rails</a></li>
@@ -44,11 +44,25 @@
   </ul>
 </details>
 
+<details>
+<summary>Front-End</summary>
+  <ul>
+    <li>HTML/CSS</li>
+    <li>JavaScript</li>
+    <li><a href="https://fontawesome.com/">Font Awesome</a></li>
+  </ul>
+</details>
+</details>
+
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
 
-- **Using RoR to structure the project.**
+- **User Authentication:** PennyLane provides secure user authentication and registration processes, ensuring your financial data remains private.
+
+- **Expense Tracking:** Easily record and categorize your transactions to maintain a clear overview of your spending habits.
+
+- **User-Friendly Interface:** PennyLane's clean and intuitive interface ensures a smooth user experience, making financial management a breeze.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
