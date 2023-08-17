@@ -20,7 +20,7 @@
           <%= link_to group_movements_path(group) do %>
             <div class="groupItemImgCont">
               <% if group.icon.present?%>
-                <%= image_tag group.icon, alt: "#{group.name} icon", class: "group-icon" %>
+                <%= image_tag group.icon, alt: "#{group.name} icon" %>
               <% else %>
                 No icon available
               <% end %>

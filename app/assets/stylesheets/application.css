@@ -224,10 +224,10 @@ a [class*=" icon-"] {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
-  top: 13%;
+  top: 160px;
 }
 
 .groupHeader {
@@ -347,4 +347,27 @@ a [class*=" icon-"] {
   color: #000;
   border: none;
   box-shadow: none;
+}
+
+/* Transactions Page */
+
+.transactions {
+  text-align: center;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+.brand {
+  text-transform: capitalize;
+  padding-left: 5px;
+}
+
+.movementDetails {
+  display: flex;
+  flex-direction: row;
+}
+
+.cardTransactions {
+  top: 245px;
 }
