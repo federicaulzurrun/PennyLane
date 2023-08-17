@@ -371,3 +371,20 @@ a [class*=" icon-"] {
 .cardTransactions {
   top: 245px;
 }
+
+/* new tansaction/movement page */
+
+.titleT {
+  margin: 0 20% !important;
+  padding-left: 80px;
+}
+
+.noMovements {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.saveT {
+  padding-top: 5px;
+}
