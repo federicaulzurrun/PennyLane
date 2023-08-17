@@ -24,7 +24,7 @@ default: &default
 development:
   <<: *default
   database: PennyLane_development
-  username: PennyLane
+  username: postgres
   password: <%= ENV["PENNYLANE_DATABASE_PASSWORD"] %>
 
   # The specified database role being used to connect to postgres.
