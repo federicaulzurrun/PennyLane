@@ -83,7 +83,4 @@ test:
 #
 production:
   <<: *default
-  url: <%= ENV["PENNYLANE_DATABASE_URL"] %>
-  database: PennyLane_production
-  username: PennyLane
-  password: <%= ENV["PENNYLANE_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
