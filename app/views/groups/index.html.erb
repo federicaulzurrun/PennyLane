@@ -13,7 +13,7 @@
       <span class="categories-text">Aggregate Spending</span>
       <span class="categories-number">$<%= total_sum = Movement.sum(:amount) %></span>
   </h2>
-  <div class="bodyGroup">
+  <div class="bodyGroup cat">
     <div class="groupsContainer">
       <% @groups.each do |group| %>
         <div class="groupItem">

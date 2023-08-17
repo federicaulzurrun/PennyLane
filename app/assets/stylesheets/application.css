@@ -136,7 +136,7 @@ a:hover {
   align-self: center;
   text-align: center;
   text-transform: uppercase;
-  font-size: 2.3vw;
+  font-size: 2vw;
 }
 
 .backArrow,
@@ -224,10 +224,10 @@ a [class*=" icon-"] {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  position: fixed;
+  position: absolute;
   bottom: 0;
   width: 100%;
-  top: 160px;
+  top: 200px;
 }
 
 .groupHeader {
@@ -236,6 +236,8 @@ a [class*=" icon-"] {
 
 .search {
   display: flex;
+  flex-direction: row;
+  justify-content: end;
 }
 
 .search img {
@@ -369,7 +371,7 @@ a [class*=" icon-"] {
 }
 
 .cardTransactions {
-  top: 245px;
+  top: 310px;
 }
 
 /* new tansaction/movement page */
