@@ -1,3 +1,8 @@
-<h1>New Group</h1>
+<div class="loginHeader groupHeader">
+  <%= link_to groups_path, class: 'backArrow' do %>
+    <i class="icon-arrow-left"></i>
+  <% end %>
+  <h2 class="groupHeaderTitle">New Category</h2>
+</div>
+
 <%= render 'form', group: @group %>
-<%= link_to 'Back', groups_path, class: 'back-link' %>

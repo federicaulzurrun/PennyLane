@@ -12,15 +12,14 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, placeholder: "Category Name", class:"email"%>
   </div>
 
   <div class="field">
     <%= form.text_field :icon, placeholder: 'Enter the url' %>
   </div>
   
-  <div class="actions">
+  <div class="action">
     <%= form.submit %>
   </div>
 <% end %>
