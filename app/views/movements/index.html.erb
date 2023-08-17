@@ -38,6 +38,6 @@
     </div>
   <% end %>
   <div class="linkContainer">
-    <%= link_to "Add a new transaction", new_group_movement_path, class:'link-to' %>
+    <%= link_to "Add a new transaction", new_group_movement_path(group_id: @group.id), class: 'link-to' %>
   </div>
 </div>

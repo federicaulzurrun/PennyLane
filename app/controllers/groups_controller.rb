@@ -3,7 +3,8 @@ class GroupsController < ApplicationController
   before_action :set_group, only: %i[show update destroy]
 
   def index
-    @groups = current_user.groups.includes(:movements)
+    @user = current_user
+    @groups = Group.where(user_id: @user.id)
   end
 
   def show

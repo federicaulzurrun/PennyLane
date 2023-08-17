@@ -11,7 +11,7 @@
 
   <h2 class="categories-title">
       <span class="categories-text">Aggregate Spending</span>
-      <span class="categories-number">$<%= total_sum = Movement.sum(:amount) %></span>
+      <span class="categories-number">$<%= total_sum = @user.movements.sum(:amount) %></span>
   </h2>
   <div class="bodyGroup cat">
     <div class="groupsContainer">
