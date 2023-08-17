@@ -1,0 +1,43 @@
+<div class="loginHeader groupHeader">
+  <%= link_to groups_path, class: 'backArrow' do %>
+    <i class="icon-arrow-left"></i>
+  <% end %>
+  <h2 class="groupHeaderTitle">Transactions</h2>
+  <div class="search">
+    <img src="https://i.postimg.cc/R0xX4NtN/pngfind-com-lupa-png-sin-fondo-4235556.png' border='0' alt='pngfind-com-lupa-png-sin-fondo-4235556'"/>
+  </div>
+</div>
+
+<h2 class="categories-title transactions">Transactions for: <%= content_tag :span, @group.name, class: 'brand' %>
+</h2>
+<h2 class="categories-title transactions">Total amount: $<%= @total_amount %></h2>
+
+<div class="bodyGroup cardTransactions">
+  <% if @movements.blank? %>
+    <h2 class="noGroup"> No registered transactions </h2>
+    <h4 class="noGroup"> Your new transactions will be placed here </h4>
+  <% else %>
+    <div class= "groupsContainer">
+      <% @movements.each do |movement| %>
+          <div class="groupItem">
+            <div class="movementDetails">
+              <div class="groupItemImgCont">
+                <%= image_tag @group.icon rescue image_tag %>
+              </div>
+              <div class="groupItemTextCont">
+                <p>Name: <%= movement.name %> </p>
+                <p>Date: <%= movement.created_at.to_date %> </p>
+              </div>
+            </div>
+            <div class="groupItemCreated">
+              <p>Amount: $<%= movement.amount %> </p>
+              <%= button_to "Delete", group_movement_path(user_id: movement.user.id, group_id: movement.group.id, id: movement.id), method: :delete, class: "btn"  %>
+            </div>
+          </div>
+      <% end %>
+    </div>
+  <% end %>
+  <div class="linkContainer">
+    <%= link_to "Add a new transaction", new_group_movement_path(group_id: @group.id), class: 'link-to' %>
+  </div>
+</div>
